@@ -1,4 +1,3 @@
-### shipped code this month every container is a public commit
 <picture>
   <source media="(prefers-reduced-motion: no-preference)"
     srcset="https://raw.githubusercontent.com/PingPongPlus/PingPongPlus/output/git-ship.gif?v=8dd1fb8">
