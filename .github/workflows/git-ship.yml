@@ -2,7 +2,7 @@ name: Git Ship
 
 on:
   schedule:
-    - cron: '23 3 * * *' # Daily at 03:23 UTC (04:23 CET / 05:23 CEST).
+    - cron: '23 * * * *' # Hourly, at minute 23.
   workflow_dispatch:
 
 permissions:
@@ -22,13 +22,14 @@ jobs:
       - uses: actions/checkout@v7
         with:
           persist-credentials: false
-      - name: Generate the last 365 days of activity
+      - name: Generate the past month of activity
         id: ship
         uses: PingPongPlus/git-ship@main
         with:
           username: ${{ github.repository_owner }}
-          data-window: year # Fixed for scheduled and manual runs.
+          data-window: month # Past 30 days, refreshed every hour.
           lighthouse-beam: 'true' # Set to 'false' to disable the rotating ray.
+          watermark: 'true' # Set to 'false' to hide the period caption.
           output-dir: git-ship-output
           token: ${{ github.token }}
       - name: Publish only images to the output branch
