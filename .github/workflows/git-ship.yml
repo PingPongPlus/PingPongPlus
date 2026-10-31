@@ -1,0 +1,44 @@
+name: Git Ship
+
+on:
+  schedule:
+    - cron: '23 3 * * *' # Daily at 03:23 UTC (04:23 CET / 05:23 CEST).
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: git-ship-output
+  cancel-in-progress: false
+
+jobs:
+  fleet:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write # Required by the separate output-branch publishing step.
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Generate the last 24 hours of activity
+        id: ship
+        uses: PingPongPlus/git-ship@6a180842d9e821392570252c94b188db65844e55 # Tested version.
+        with:
+          username: ${{ github.repository_owner }}
+          data-window: day # Fixed for scheduled and manual runs.
+          output-dir: git-ship-output
+          token: ${{ github.token }}
+      - name: Publish only images to the output branch
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          SHIP_PUBLISH_SCRIPT: ${{ steps.ship.outputs.publish-script }}
+          SHIP_ASSETS: ${{ steps.ship.outputs.output-dir }}
+          SHIP_DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          set -euo pipefail
+          python "$SHIP_PUBLISH_SCRIPT" \
+            --assets-dir "$SHIP_ASSETS" \
+            --repository "$GITHUB_REPOSITORY" \
+            --default-branch "$SHIP_DEFAULT_BRANCH"

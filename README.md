@@ -1,3 +1,7 @@
-<img width="300" alt="niklas@github:~$ ./whoami.sh" src="./terminal-prompt.svg" />
-<br><br>
-<img width="2170" alt="Logo" src="https://github.com/user-attachments/assets/181b6952-03d1-4206-8315-cb30f2cbe2b2" />
+<picture>
+  <source media="(prefers-reduced-motion: no-preference)"
+    srcset="https://raw.githubusercontent.com/PingPongPlus/PingPongPlus/output/git-ship.gif">
+  <img width="800"
+    src="https://raw.githubusercontent.com/PingPongPlus/PingPongPlus/output/git-ship.png"
+    alt="My programming languages as pixel ships carrying the last 24 hours of commit cargo beside a lighthouse">
+</picture>
