@@ -24,7 +24,7 @@ jobs:
           persist-credentials: false
       - name: Generate the last 24 hours of activity
         id: ship
-        uses: PingPongPlus/git-ship@6a180842d9e821392570252c94b188db65844e55 # Tested version.
+        uses: PingPongPlus/git-ship@4b01e6d0045e3d5a14dba36cf341987487cc4f32 # Tested dynamic-ships version.
         with:
           username: ${{ github.repository_owner }}
           data-window: day # Fixed for scheduled and manual runs.
