@@ -26,6 +26,7 @@ jobs:
         id: ship
         uses: PingPongPlus/git-ship@main
         with:
+          cargo-logos: 'true'
           username: ${{ github.repository_owner }}
           data-window: month # Past 30 days, refreshed every hour.
           lighthouse-beam: 'true' # Set to 'false' to disable the rotating ray.
