@@ -26,7 +26,6 @@ jobs:
         id: ship
         uses: PingPongPlus/git-ship@main
         with:
-          cargo-logos: 'true'
           username: ${{ github.repository_owner }}
           data-window: month # Past 30 days, refreshed every hour.
           lighthouse-beam: 'true' # Set to 'false' to disable the rotating ray.
@@ -34,6 +33,7 @@ jobs:
           display-commits: 'true' # Full past-month commit total at the bottom right.
           output-dir: git-ship-output
           huge-cargo-ship: 'true'
+          cargo-logos: 'true'
           token: ${{ github.token }}
       - name: Publish only images to the output branch
         env:
