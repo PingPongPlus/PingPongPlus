@@ -34,6 +34,7 @@ jobs:
           output-dir: git-ship-output
           huge-cargo-ship: 'true'
           cargo-logos: 'true'
+          rain: 'true'
           token: ${{ github.token }}
       - name: Publish only images to the output branch
         env:
