@@ -33,6 +33,7 @@ jobs:
           display-commits: 'true' # Full past-month commit total at the bottom right.
           output-dir: git-ship-output
           huge-cargo-ship: 'true'
+          endless-cargo: 'true'
           cargo-logos: 'true'
           rain: 'true'
           token: ${{ github.token }}
