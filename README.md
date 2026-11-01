@@ -7,3 +7,13 @@
 </picture>
 
 <sub>Hull counter = all authored punlic commits in the past year · cargo = programming/scripting commits · large container = 6 · small = 1 · MIX = mixed-language leftovers.</sub>
+
+<picture>
+  <source media="(prefers-reduced-motion: no-preference)"
+    srcset="https://raw.githubusercontent.com/PingPongPlus/PingPongPlus/output/git-jet.gif">
+  <img width="800"
+    src="https://raw.githubusercontent.com/PingPongPlus/PingPongPlus/output/git-jet.png"
+    alt="My past year of public commits, cleared one active day at a time by a pixel jet launched from an aircraft carrier">
+</picture>
+
+<sub><a href="https://github.com/PingPongPlus/git-jet">Git Jet</a> · past year · one attack per active day · refreshed daily.</sub>
