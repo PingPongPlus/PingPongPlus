@@ -32,6 +32,7 @@ jobs:
           watermark: 'true' # Set to 'false' to hide the period caption.
           display-commits: 'true' # Full past-month commit total at the bottom right.
           output-dir: git-ship-output
+          huge-cargo-ship: 'true'
           token: ${{ github.token }}
       - name: Publish only images to the output branch
         env:
