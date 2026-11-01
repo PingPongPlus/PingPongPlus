@@ -27,7 +27,7 @@ jobs:
         uses: PingPongPlus/git-ship@main
         with:
           username: ${{ github.repository_owner }}
-          data-window: day # Past 365 days, refreshed every hour.
+          data-window: month # Past 365 days, refreshed every hour.
           lighthouse-beam: 'true' # Set to 'false' to disable the rotating ray.
           watermark: 'true' # Set to 'false' to hide the period caption.
           display-commits: 'true' # Full past-month commit total at the bottom right.
