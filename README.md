@@ -6,4 +6,4 @@
     alt="My total authored commits in the past year on a cargo ship with animated rain; containers show programming and scripting commits grouped by language">
 </picture>
 
-<sub>Hull counter = all authored commits in the past year · cargo = programming/scripting commits · large container = 6 · small = 1 · MIX = mixed-language leftovers.</sub>
+<sub>Hull counter = all authored punlic commits in the past year · cargo = programming/scripting commits · large container = 6 · small = 1 · MIX = mixed-language leftovers.</sub>
