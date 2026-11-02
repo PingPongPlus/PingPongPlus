@@ -1,3 +1,4 @@
+<!--
 <picture>
   <source media="(prefers-reduced-motion: no-preference)"
     srcset="https://raw.githubusercontent.com/PingPongPlus/PingPongPlus/output/git-ship.gif?v=247c077-rain">
@@ -7,6 +8,7 @@
 </picture>
 
 <sub>Hull counter = all authored punlic commits in the past year · cargo = programming/scripting commits · large container = 6 · small = 1 · MIX = mixed-language leftovers.</sub>
+-->
 
 <picture>
   <source media="(prefers-reduced-motion: no-preference)"
