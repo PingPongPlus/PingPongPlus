@@ -29,6 +29,7 @@ jobs:
         with:
           username: ${{ github.repository_owner }}
           days: '365'
+          jets: '2'
       - name: Publish README images
         env:
           JET_PUBLISH_SCRIPT: ${{ steps.jet.outputs.publish-script }}
