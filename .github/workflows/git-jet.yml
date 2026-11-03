@@ -27,6 +27,7 @@ jobs:
         id: jet
         uses: PingPongPlus/git-jet@master
         with:
+          graph-theme: 'github'
           username: ${{ github.repository_owner }}
           days: '365'
           jets: '2'
